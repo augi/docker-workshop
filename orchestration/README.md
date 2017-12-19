@@ -11,4 +11,4 @@ Task 2
 2. Schedule a new application named `test` - it's created from `nginx` image. Expose its TCP port 80.
 3. Find out where the application is running (show the nginx page in your browser)
 
- > Hint: The Docke container created by Marathon is running on the same Docker host as the Mesos/Marathon.
+ > Hint: The Docker container created by Marathon is running on the same Docker host as the Mesos/Marathon.
