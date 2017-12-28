@@ -57,3 +57,13 @@ services:
       - MARATHON_DECLINE_OFFER_DURATION=3600000
       - MARATHON_MESOS_AUTHENTICATION_PRINCIPAL=marathon
       - MARATHON_MESOS_ROLE=public
+
+  marathon-lb:
+    image: mesosphere/marathon-lb:v1.11.2
+    command: sse --marathon http://marathon:8080 --group *
+    environment:
+      - "PORTS=9090"
+    ports:
+      - "9090:9090"
+      - "9091:9091"
+      - "8888:80"
